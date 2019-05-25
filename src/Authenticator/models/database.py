@@ -44,7 +44,7 @@ class Database:
             self.__apply_migrations()
         self.conn = sqlite3.connect(self.db_file)
         self.__fill_providers()
-    
+
     @staticmethod
     def get_default():
         """Return the default instance of database"""
@@ -269,7 +269,7 @@ class Database:
                     file_obj.write('')
                 created = True
         return created
-    
+
     def __apply_migrations(self):
         """
         Create the needed tables to run the application.

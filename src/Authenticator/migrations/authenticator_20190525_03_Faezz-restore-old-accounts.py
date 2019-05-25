@@ -5,6 +5,8 @@ Restore old accounts
 from yoyo import step
 
 __depends__ = {'authenticator_20190525_02_mdR2o-create-table-providers'}
+
+
 def do_step(conn):
     accounts = conn.execute("SELECT * FROM accounts").fetchall()
     _accounts = []
@@ -24,6 +26,8 @@ def do_step(conn):
     cursor.execute("DROP TABLE tmp;")
     for account_id, username, provider_id, token_id in _accounts:
         cursor.execute("INSERT INTO accounts (username, provider, token_id) VALUES (?, ?, ?)", (username, provider_id, token_id))
+
+
 steps = [
     step(do_step, ignore_errors='apply')
 ]
