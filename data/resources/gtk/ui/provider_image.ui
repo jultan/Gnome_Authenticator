@@ -25,9 +25,8 @@
           <object class="GtkImage" id="provider_image">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="pixel_size">128</property>
+            <property name="pixel_size">48</property>
             <property name="resource">/com/github/bilelmoussaoui/Authenticator/provider-missing.svg</property>
-            <property name="icon_size">6</property>
           </object>
           <packing>
             <property name="index">-1</property>
